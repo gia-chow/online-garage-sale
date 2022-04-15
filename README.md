@@ -4,3 +4,6 @@
 - Users are able to add and remove items from the cart
 - The cart badge will update as items are added and removed
 - The checkout button will display different messages if the cart is empty and if there are items in the cart
+
+# working demo
+- https://codepen.io/eugeniachow/pen/MWrqyRj
