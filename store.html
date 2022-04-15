@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Online Garage Sale</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Javascript -->
+    <script src="store.js" async></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/8fc8fc7333.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Start nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inventory">Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-cart-shopping"></i><span class="badge badge-warning cartCount">0</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End nav -->
+    <!-- Start cart -->
+    <section class="container content-section collapse" id="collapseExample">
+        <h2 class="section-header mt-5 text-center"></i></h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+                <!-- Cart items added will show up here -->
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button onclick="checkoutClicked()" class="btn btn-primary btn-purchase" type="button">Check Out</button>
+    </section>
+    <!-- End cart -->
+    <!-- Start inventory -->
+    <section class="container content-section">
+        <h2 class="section-header text-center mt-5" id="inventory">INVENTORY</h2>
+
+        <div class="card-deck">
+            <div class="row mt-5 justify-content-center">
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/dresser.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">Antique Dresser</h5>
+                        <p class="card-text">Solid wood dresser - gently used</p>
+                        <span class="shop-item-price">$210.00</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/bed.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">Full Size Bed Set</h5>
+                        <p class="card-text">Full size bedframe and mattress</p>
+                        <span class="shop-item-price">$70.00</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/lamps.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">Pair of Lamps</h5>
+                        <p class="card-text">Two lamps for the price of one!</p>
+                        <span class="shop-item-price">$80.00</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/mcm.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">MCM Buffet w/ Side Tables</h5>
+                        <p class="card-text">MCM buffet with matching side tables</p>
+                        <span class="shop-item-price">$129.00</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/coffee-table.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">Coffee Table</h5>
+                        <p class="card-text">Gently used coffee table</p>
+                        <span class="shop-item-price">$79.99</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card card-custom mx-2 mb-3 col-xl-4 shop-item">
+                    <img class="card-img-top shop-item-image" src="/img/tv-stand.jpg" alt="Card image cap">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title shop-item-title">TV Stand</h5>
+                        <p class="card-text">Refinished MCM TV stand or console table</p>
+                        <span class="shop-item-price">$89.99</span>
+                        <button class="btn btn-primary mt-auto shop-item-button" type="button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End inventory -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
